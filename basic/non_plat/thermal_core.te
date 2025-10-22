@@ -83,3 +83,5 @@ allow thermal_core gsm0710muxd_device:chr_file rw_file_perms;
 # To read connsys node
 allow thermal_core conn_pwr_device:chr_file rw_file_perms_no_map;
 
+# Allow thermal_core to create a netlink socket
+allow thermal_core self:netlink_generic_socket create_socket_perms_no_ioctl;
